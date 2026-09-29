@@ -1,0 +1,583 @@
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4efe6;
+    color: #29251f;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1250px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    color: white;
+    background-color: rgba(30, 27, 22, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #f4efe6;
+    color: #29251f;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Hero
+========================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(30, 25, 20, 0.45),
+            rgba(30, 25, 20, 0.65)
+        ),
+        url("hero6.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 550px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 40px;
+    background-color: #e7dcc9;
+    color: #29251f;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   About
+========================= */
+
+.about {
+    padding: 150px 10%;
+    background-color: #f4efe6;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-label {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #8b6f4e;
+}
+
+.about h2 {
+    max-width: 700px;
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    max-width: 600px;
+    font-size: 24px;
+    line-height: 2;
+    color: #62594e;
+}
+
+
+/* =========================
+   Explore
+========================= */
+
+.explore {
+    padding: 120px 8%;
+    background-color: #e9dfd0;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section-heading > p:last-child {
+    color: #6d6459;
+    font-size: 18px;
+}
+
+.regions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.region-card {
+    background-color: #f7f2ea;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.region-card:hover {
+    transform: translateY(-8px);
+}
+
+.region-card img {
+    height: 430px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 28px;
+}
+
+.card-content > p:first-child {
+    font-size: 13px;
+    color: #8b6f4e;
+    margin-bottom: 8px;
+}
+
+.card-content h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: #6d6459;
+    margin-bottom: 20px;
+}
+
+.card-content a {
+    font-size: 14px;
+    border-bottom: 1px solid #29251f;
+    padding-bottom: 4px;
+}
+
+
+/* =========================
+   Featured Story
+========================= */
+
+.featured-story {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    min-height: 700px;
+    background-color: #29251f;
+    color: #f4efe6;
+}
+
+.story-image {
+    height: 100%;
+}
+
+.story-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+}
+
+.story-content h2 {
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.story-content > p:not(.eyebrow) {
+    max-width: 500px;
+    font-size: 18px;
+    color: #cfc4b4;
+    margin-bottom: 35px;
+}
+
+.secondary-button {
+    width: fit-content;
+    border: 1px solid #f4efe6;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.secondary-button:hover {
+    background-color: #f4efe6;
+    color: #29251f;
+}
+
+
+/* =========================
+   Crafts
+========================= */
+
+.crafts {
+    padding: 140px 8%;
+    background-color: #f4efe6;
+}
+
+.craft-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.craft-card {
+    min-height: 300px;
+    padding: 35px;
+    border: 1px solid #d4c7b5;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.craft-card:hover {
+    background-color: #e9dfd0;
+    transform: translateY(-5px);
+}
+
+.craft-number {
+    display: block;
+    color: #9a7954;
+    font-size: 14px;
+    margin-bottom: 70px;
+}
+
+.craft-card h3 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.craft-card p {
+    color: #6d6459;
+}
+
+
+/* =========================
+   Did You Know
+========================= */
+
+.did-you-know {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #d9c7ae;
+}
+
+.fact-content {
+    max-width: 750px;
+}
+
+.fact-content h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.25;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+#fact-button {
+    border: 1px solid #29251f;
+    background-color: transparent;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#fact-button:hover {
+    background-color: #29251f;
+    color: #f4efe6;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 160px 20px;
+    text-align: center;
+    background-color: #29251f;
+    color: #f4efe6;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta h2 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.cta-content > p:not(.eyebrow) {
+    color: #cfc4b4;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background-color: #1f1c18;
+    color: #f4efe6;
+    padding: 70px 8% 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-brand h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #aaa094;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.footer-links a {
+    color: #cfc4b4;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #3a3530;
+    padding-top: 25px;
+    color: #81786e;
+    font-size: 13px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .regions {
+        grid-template-columns: 1fr;
+    }
+
+    .region-card img {
+        height: 350px;
+    }
+
+    .featured-story {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image {
+        height: 500px;
+    }
+
+    .craft-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 94%;
+        padding: 14px 18px;
+    }
+
+    .nav-button {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .about,
+    .explore,
+    .crafts {
+        padding: 90px 6%;
+    }
+
+    .about-text {
+        font-size: 20px;
+    }
+
+    .story-content {
+        padding: 70px 8%;
+    }
+
+    .story-image {
+        height: 400px;
+    }
+
+    .cta {
+        padding: 110px 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
